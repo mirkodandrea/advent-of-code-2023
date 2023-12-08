@@ -8,9 +8,9 @@ Advent of Code is an annual December event where participants solve a daily codi
 
 ## Why Rust? ##
 
-Why not?
+Why not? 🙃
 
-Getting Started
+## Getting Started ##
 
 Install Rust: If you haven't already, install Rust by following the instructions on the official website.
 
