@@ -15,7 +15,7 @@ Getting Started
 Install Rust: If you haven't already, install Rust by following the instructions on the official website.
 
 
-Clone the Repository: git clone https://github.com/mirkodandrea/advent-of-code-2023.git
+Clone the Repository: `git clone https://github.com/mirkodandrea/advent-of-code-2023.git`
 
 
 Navigate to Each Day's Folder: Solutions are organized by day.
