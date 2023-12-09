@@ -8,9 +8,9 @@ fn main() {
 
 fn process_game(game: &str, map: &HashMap<String, i32>) -> bool {
     let mut valid = true;
-    for cubes in game.split(",") {
+    for cubes in game.split(',') {
         let cube_vec: Vec<&str> = cubes.trim().splitn(2, ' ').collect();
-        let number = cube_vec.get(0).unwrap().parse::<i32>().unwrap();
+        let number = cube_vec.first().unwrap().parse::<i32>().unwrap();
         let color = cube_vec.get(1).unwrap();
         let max = map.get(*color).unwrap();
         valid &= number <= *max
@@ -28,7 +28,7 @@ fn process(_input: &str) -> String {
         .lines()
         .map(|line| line.splitn(2, ':').collect())
         .filter_map(|line_splitted: Vec<&str>| {
-            let game_id = line_splitted.get(0).unwrap().trim();
+            let game_id = line_splitted.first().unwrap().trim();
             let game_id_number = game_id.replace("Game ", "").parse::<i32>().unwrap();
             let games = line_splitted.get(1).unwrap().trim();
 

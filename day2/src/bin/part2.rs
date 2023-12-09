@@ -10,9 +10,9 @@ fn main() {
 fn game_power(rounds: Vec<&str>) -> i32 {
     let mut viable: HashMap<String, i32> = HashMap::new();
     for round in rounds {
-        for cubes in round.split(",") {
+        for cubes in round.split(',') {
             let cube_vec: Vec<&str> = cubes.trim().splitn(2, ' ').collect();
-            let number = cube_vec.get(0).unwrap().parse::<i32>().unwrap();
+            let number = cube_vec.first().unwrap().parse::<i32>().unwrap();
             let color = cube_vec.get(1).unwrap();
 
             let value = match viable.get(*color) {
@@ -41,7 +41,7 @@ fn process(_input: &str) -> String {
         .map(|line| line.splitn(2, ':').collect())
         .map(|line_splitted: Vec<&str>| {
             let rounds = line_splitted.get(1).unwrap().trim();
-            let rounds = rounds.split(";").collect::<Vec<&str>>();
+            let rounds = rounds.split(';').collect::<Vec<&str>>();
             game_power(rounds)
         })
         .inspect(|power| {
