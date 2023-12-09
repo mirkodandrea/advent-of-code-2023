@@ -1,3 +1,4 @@
 **/target
 **/src/bin/input?.txt
 **/src/bin/input.txt
+.DS_Store
